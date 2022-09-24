@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+// import './App.css';
+import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
+import Landing from "./components/Landing/Landing";
+import Form from "./components/Form/Form";
+import Explore from "./components/Explore/Explore";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Routes,
+  Link,
+  withRouter,
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/form" element={<Form />} />
+          <Route path="/explore" element={<Explore />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
