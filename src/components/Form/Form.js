@@ -4,14 +4,13 @@ import ConnectWallet from "../ConnectWallet/ConnectWallet";
 import { Buffer } from "buffer";
 import config from "../../config";
 import xNFTSourceABI from "../../config/xNFTSourceABI";
-
+import { Web3Storage, File } from 'web3.storage'
 const Form = (props) => {
   const [name, setName] = useState("");
   const [symbol, setSymbol] = useState("");
   const [uri, setUri] = useState("");
   const [chain, setChain] = useState([]);
   const [price, setPrice] = useState("");
-
   const { data: signer, isError, isLoading } = useSigner();
   const contract = useContract({
     addressOrName: config.xNFTSourceAddress,
@@ -26,16 +25,23 @@ const Form = (props) => {
     reader.readAsArrayBuffer(e);
     reader.onloadend = async () => {
       buffer = Buffer(reader.result);
-      console.log(buffer);
       try {
+        // const client = create('https://ipfs.infura.io:5001/api/v0');
         //   const created = await client.add(buffer);
         //   const url = `https://ipfs.infura.io/ipfs/${created.path}`;
         //   console.log(url)
-        //   setNFTUri(url)
-        setUri(
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Google_Images_2015_logo.svg/800px-Google_Images_2015_logo.svg.png"
-        );
-      } catch (error) {}
+        //   setUri(url)
+        // // setUri(
+        // //   "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Google_Images_2015_logo.svg/800px-Google_Images_2015_logo.svg.png"
+        // // );
+        const web3Storage = new Web3Storage({ token: config.web3storageToken })
+        const file = [new File([buffer],"xNFT")]
+        const cid = await web3Storage.put(file)
+        console.log(`https://${cid}.ipfs.w3s.link/xNFT`)
+        setUri(`https://${cid}.ipfs.w3s.link/xNFT`)
+      } catch (error) {
+        console.log(error)
+      }
     };
   };
 
@@ -43,9 +49,10 @@ const Form = (props) => {
     console.log(name);
     console.log(symbol);
     console.log(price);
-    console.log(chain);
     console.log(uri);
-    const tx = await contract.launchNFT(name, symbol, uri, (parseInt(price)*Math.pow(10,18)).toString(), [chain.toString()]);
+    const supportedChains = chain.split(",")
+    console.log(supportedChains);
+    const tx = await contract.launchNFT(name, symbol, uri, (parseInt(price)*Math.pow(10,18)).toString(), supportedChains);
     console.log(tx)
    
   };

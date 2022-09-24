@@ -1,12 +1,14 @@
 const config = {
-    xNFTSourceAddress: "0x906ed5065953B610470Cb91364f98ff8a2aAE588",
-    xNFTDestinationEthereumAddress:"0x7D57442DB9cD06cDa38EBd8e05f8b2AD8062221b", //TODO: change to correct address
-    xNFTDestinationOptimismAddress:"0x5DfaDbd2d235089b971B9b842AE2191cADC34733",//TODO: change to correct address
-    xNFTDestinationPolygonAddress:"", //TODO: change to correct address,
+    xNFTSourceAddress: "0x4826b153CE5489d9194ab27232078181060Cb65D",
+    xNFTDestinationEthereumAddress:"0xB85b07eA44837460e140b469f459921684123988", //TODO: change to correct address
+    xNFTDestinationOptimismAddress:"0xd290D5FA1D6bb6f94604E39B332a21617e221467",//TODO: change to correct address
+    xNFTDestinationPolygonAddress:"0x4378b4CFA2AF4701957676A78B8D78856ab8eF76", //TODO: change to correct address,
     chainIdToContractMap: {
-        420: "0x5DfaDbd2d235089b971B9b842AE2191cADC34733",
-        5:"0x7D57442DB9cD06cDa38EBd8e05f8b2AD8062221b"
-    }
+        420: "0xd290D5FA1D6bb6f94604E39B332a21617e221467",
+        5:"0xB85b07eA44837460e140b469f459921684123988",
+        80001:"0x4378b4CFA2AF4701957676A78B8D78856ab8eF76"
+    },
+    web3storageToken:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDk0ZWUwYWUzMkU0N0QwMzAxOWMwRDI2NmRkRGUxRDBjOGI5Njc4ZTciLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NjIxNDQ5NTg2MDcsIm5hbWUiOiJlcG5zLWRldiJ9.pHaua_YDAXEKIh8ZrgYD_1tnGgeRQ3_B7hSMGEBIQXc"
 }
 
 export default config

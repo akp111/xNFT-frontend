@@ -54,42 +54,89 @@ const Landing = () => {
         <div> </div>
       )}
       {showButtonElement ? (
-        <button
-          style={{
-            marginTop: "2.5%",
-            position: "relative",
-            alignSelf: "center",
-            width: "15%",
-            borderWidth: "1px",
-            borderStyle: "solid",
-            borderRadius: "5px",
-            paddingTop: "1rem",
-            paddingBottom: "1rem",
-            paddingLeft: "1rem",
-            paddingRight: "1rem",
-            fontSize: "1.25rem",
-            color: "white",
-            fontWeight: "700",
-            backgroundImage:
-              "linear-gradient(to right top, #ff6e11, #fc8300, #f79700, #f2a900, #ebba12)",
-            cursor: "pointer"
-          }}
-          onMouseEnter={(event) => {
-            event.target.style.borderWidth = "2px";
-            event.target.style.borderColor = "white";
-            event.target.style.backgroundImage =
-              "linear-gradient(to right top, #ffb311, #fc9f06, #f78a05, #f2760b, #eb6012)";
-          }}
-          onMouseLeave={(event) => {
-            event.target.style.borderWidth = "1px";
-            event.target.style.borderColor = "black";
-            event.target.style.backgroundImage =
-              "linear-gradient(to right top, #ff6e11, #fc8300, #f79700, #f2a900, #ebba12)";
-          }}
-        >
-          {" "}
-          Launch App
-        </button>
+        <>
+          <button
+            style={{
+              marginTop: "2.5%",
+              position: "relative",
+              alignSelf: "center",
+              width: "15%",
+              borderWidth: "1px",
+              borderStyle: "solid",
+              borderRadius: "5px",
+              paddingTop: "1rem",
+              paddingBottom: "1rem",
+              paddingLeft: "1rem",
+              paddingRight: "1rem",
+              fontSize: "1.25rem",
+              color: "white",
+              fontWeight: "700",
+              backgroundImage:
+                "linear-gradient(to right top, #ff6e11, #fc8300, #f79700, #f2a900, #ebba12)",
+              cursor: "pointer",
+              animation: "fadeIn",
+              animationDuration: "2s",
+            }}
+            onMouseEnter={(event) => {
+              event.target.style.borderWidth = "2px";
+              event.target.style.borderColor = "white";
+              event.target.style.backgroundImage =
+                "linear-gradient(to right top, #ffb311, #fc9f06, #f78a05, #f2760b, #eb6012)";
+            }}
+            onMouseLeave={(event) => {
+              event.target.style.borderWidth = "1px";
+              event.target.style.borderColor = "black";
+              event.target.style.backgroundImage =
+                "linear-gradient(to right top, #ff6e11, #fc8300, #f79700, #f2a900, #ebba12)";
+            }}
+          >
+            {" "}
+            <a href="/form" style={{ color: "white", textDecoration: "none" }}>
+              Launch App
+            </a>
+          </button>
+
+          <button
+            style={{
+              marginTop: "2.5%",
+              position: "relative",
+              alignSelf: "center",
+              width: "15%",
+              borderWidth: "1px",
+              borderStyle: "solid",
+              borderRadius: "5px",
+              paddingTop: "1rem",
+              paddingBottom: "1rem",
+              paddingLeft: "1rem",
+              paddingRight: "1rem",
+              fontSize: "1.25rem",
+              color: "white",
+              fontWeight: "700",
+              backgroundImage:
+                "linear-gradient(to right top, #ff6e11, #fc8300, #f79700, #f2a900, #ebba12)",
+              cursor: "pointer",
+              animation: "fadeIn",
+              animationDuration: "2s",
+            }}
+            onMouseEnter={(event) => {
+              event.target.style.borderWidth = "2px";
+              event.target.style.borderColor = "white";
+              event.target.style.backgroundImage =
+                "linear-gradient(to right top, #ffb311, #fc9f06, #f78a05, #f2760b, #eb6012)";
+            }}
+            onMouseLeave={(event) => {
+              event.target.style.borderWidth = "1px";
+              event.target.style.borderColor = "black";
+              event.target.style.backgroundImage =
+                "linear-gradient(to right top, #ff6e11, #fc8300, #f79700, #f2a900, #ebba12)";
+            }}
+          >
+            {" "}
+            <a href="/explore" style={{ color: "white", textDecoration: "none" }}>
+              Explore App
+            </a>
+          </button>
+        </>
       ) : (
         <div></div>
       )}

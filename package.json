@@ -10,12 +10,14 @@
     "animate.css": "^4.1.1",
     "buffer": "^6.0.3",
     "ethers": "^5.7.1",
+    "ipfs-http-client": "57.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",
     "wagmi": "^0.6.7",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "web3.storage": "^4.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
