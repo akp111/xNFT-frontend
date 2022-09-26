@@ -1,5 +1,5 @@
 const config = {
-    xNFTSourceAddress: "0x4826b153CE5489d9194ab27232078181060Cb65D",
+    xNFTSourceAddress: "0x808C764b283999C35C4e194aDdD5Bc07843ADb7E",
     xNFTDestinationEthereumAddress:"0xB85b07eA44837460e140b469f459921684123988", //TODO: change to correct address
     xNFTDestinationOptimismAddress:"0xd290D5FA1D6bb6f94604E39B332a21617e221467",//TODO: change to correct address
     xNFTDestinationPolygonAddress:"0x304D753EE817D7eFC8016CdC69F6C65Fe7A5b873", //TODO: change to correct address,
